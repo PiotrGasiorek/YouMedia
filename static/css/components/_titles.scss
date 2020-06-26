@@ -1,0 +1,46 @@
+.title{
+    font-weight: map-get($font_weights, "bold");
+    font-family: map-get($font_family, "default");
+    color: map-get($colors, "quaternary");
+    line-height: 1.6em;
+    padding: 0 0 0.75em 0;
+    margin: 0;
+
+    &--lg{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    &--md{
+        font-size: 30px;
+    }
+
+    &--sm{
+        font-size: 22px;
+    }
+
+    &--xs{
+        font-size: 20px;
+    }
+
+    &--light{
+        color: map-get($colors, "neutral");
+    }
+
+    &--grey{
+        color: map-get($colors, "secondary");
+    }
+}
+
+@media (max-width: 730px) {
+    .title{
+        &--lg{
+            font-size: 30px;
+        }
+
+        &--md{
+            font-size: 25px;
+        }
+    }
+}
+  

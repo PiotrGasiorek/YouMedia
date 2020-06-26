@@ -1,0 +1,37 @@
+$colors: (
+    primary: #2E4057, 
+    secondary: #888888, 
+    secondary--lighter: #C6C6C6, 
+    tertiary: #99C24D, 
+    quaternary: #2F2D2E,
+    neutral:#FFFFFF, 
+);
+
+$font_weights: (
+    bold: 700,
+    normal: 500,
+);
+
+$font_family: (
+    default: 'Comfortaa',
+);
+
+$box_shadows: (
+    primary: 0px 4px 20px #2E405799,
+    secondary: 0px 4px 20px #99C24D99,
+    tertiary: 0px 4px 20px rgba(46, 64, 87, 0.2),
+    quaternary: 0px 4px 20px rgba(255, 255, 255, 0.2),
+);
+
+$border_radius: 5px;
+
+$breakpoints: (
+    mobile: 480px,
+    tablet: 980px,
+);
+
+$containers: (
+    small: 4vw,
+    medium: 9vw,
+    large: 19vw,
+);

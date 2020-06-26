@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Jesteśmy młodymi ambitnymi twórcami. Oferujemy usługi foto wideo, tworzenie stron, grafik oraz rental sprzętu.">
+    <title>YouMedia</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/gallery/icons/favicon.png"/>
+    <!-- Screen loading -->
+    <script src="static/js/screenLoading.js" type="module"></script>
+    <!-- Responsive nav -->
+    <script src="static/js/mobileNav.js" type="module"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148027686-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-148027686-1');
+    </script>
+</head>
+<body>
+    <div class="animationBlock">    
+        <img class='animationBlock__content' src="static/gallery/logo.svg" alt="YouMedia logo">
+    </div>
+    <header class='header header--small'>
+        <nav class='nav nav__container nav--light'>
+            <div class="nav__left">
+                <a href="strona-glowna">
+                    <img class='nav__logo' src="static/gallery/logo.svg" alt="YouMedia logo">
+                </a>
+            </div>
+            <div class="nav__right">
+                <div class="nav__links">
+                    <a href="portfolio" class="nav__link link link--light">portfolio</a>
+                    <a href="zespol" class="nav__link link link--light">zespół</a>
+                    <a href="praca" class="nav__link link link--light">praca</a>
+                    <a href="rental" class="nav__link link link--light">rental sprzętu</a>
+                    <a href="kontakt" class="nav__link link link--light">kontakt</a>
+                </div>
+            </div>
+        </nav>
+        <div id='navOverlay' class="overlay"></div>
+        <div class="sideNav">
+            <button class='sideNav__btn btn--round'>
+                <img src="static/gallery/icons/close--light.svg" alt="Close button">
+            </button>
+        </div>
+    </header>
+    <div class="container container--primary">
+        <main class="main">
+            <h1 class='main__title title title--lg'>
+                Jesteś zainteresowany współpracą?
+                <br> 
+                Masz jakieś pytania?
+            </h1>
+            <p class="main__paragraph paragraph paragraph--md paragraph--centered">
+                Napisz do nas na office@you-media.pl
+                <br> 
+                lub skontaktuj się z nami telefonicznie (+48) 696 979 896
+            </p>
+            <img class='main__graphic' src="static/gallery/graphics/contact.svg" alt="Man transporting quipment">
+            <form class="form" name='mail'>
+                <h2 class="form__title title title--md">Wypełnij formularz</h2>   
+                <div class="form__group">
+                    <label class="form__label" for='address' required>Email</label>
+                    <input name='address' type="text" class="form__input" id='address' placeholder="youremail@gmail.com" required>
+                </div>            
+                <div class="form__group">
+                    <label class="form__label" for='message' required>Message</label>
+                    <textarea name='message' type="text" class="form__textarea" id='message' placeholder="Would like to ask" required></textarea>
+                </div>
+                <button class="form__btn btn btn--primary" type='submit'>Wyślij wiadomość</button>
+            </form>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid grid grid--three">
+                <div class='footer__column'>
+                    <a href="strona-glowna">
+                        <img class='footer__logo' src="static/gallery/logo.svg" alt="YouMedia logo">
+                    </a>
+                </div>
+                <div class='footer__column'>
+                    <h4 class='footer__title title title--light title--xs'>Kontakt</h4>
+                    <a href="mailto:office@you-media.pl" class="footer__link link link--dark">office@you-media.pl</a>
+                    <a href="tel:696-979-896" class="footer__link link link--dark">(+48) 696 979 896</a>
+                    <a href="https://www.instagram.com/you.media/" class="footer__link link link--dark">
+                        <img class='footer__icon link--icon' src="static/gallery/icons/instagram.svg" alt="Instagram icon">
+                    </a>
+                </div>
+                <div class='footer__column'>
+                    <h4 class='footer__title title title--light title--xs'>Podstrony</h4>
+                    <a href="praca" class="footer__link link link--dark">praca</a>
+                    <a href="kontakt" class="footer__link link link--dark">kontakt</a>
+                    <a href="zespol" class="footer__link link link--dark">zespół</a>
+                    <a href="portfolio" class="footer__link link link--dark">portfolio</a>
+                    <a href="rental" class="footer__link link link--dark">rental sprzętu</a>
+                </div>
+            </div>
+            <p class='paragraph paragraph--dark paragraph--sm'>copyright 2020 wszystkie prawa zastrzeżone YouMedia</p>
+        </div>
+    </footer>
+    
+    <!-- Form API -->
+    <script src="static/js/contactAPI.js" type="module"></script>
+</body>

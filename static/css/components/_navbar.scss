@@ -1,0 +1,81 @@
+.nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__container{
+        padding: 0 map-get($containers, "medium");
+    }
+
+    &__link{
+        margin-left: 50px;
+    }
+
+    &__logo{
+        width: 200px;
+    }
+
+    &--dark{
+        background: transparent;
+    }
+    
+    &--light{
+        background: map-get($colors, "neutral");
+    }
+}
+
+// Side nav for mobiles
+.sideNav{
+    height: 100vh;
+    width: 400px;
+    padding: 23px 30px;
+    overflow: auto;
+    position: absolute;
+    background: map-get($colors, 'neutral');
+    top: 0;
+    transform: translateX(-101%);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 100;
+    
+    &--active{
+        transform: translateX(0%);
+    }
+
+    &__btn{
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 1067px) {
+    .sideNav {
+
+        .nav__link {
+            display: block;
+            font-size: 25px;
+            margin: 0 0 40px 0;
+        }
+        
+        .nav__links{
+            padding-top: 10vw;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sideNav{
+        width: 100%;
+    }
+}
+
+// Container for tablets
+
+@media (max-width: map-get($breakpoints, "tablet")) {
+    .nav__container{
+        padding: 50px map-get($containers, "small") 30px map-get($containers, "small");
+    }
+}

@@ -1,0 +1,31 @@
+.footer{
+    background: map-get($colors, "primary");
+    
+    &__container{
+        padding: 50px map-get($containers, "medium") 30px map-get($containers, "medium");
+    }
+
+    &__column{
+        margin-bottom: 5vw;
+    }
+
+    &__link:not(:last-child){
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    &__icon{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: map-get($breakpoints, "tablet")) {
+    .footer__container{
+        padding: 50px map-get($containers, "small") 30px map-get($containers, "small");
+    }
+}
+
+
+
+
+

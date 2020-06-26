@@ -1,0 +1,62 @@
+.link{
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 18px;
+    font-family: map-get($font_family, "default");
+    font-weight: map-get($font_weights, "bold");
+    position: relative;
+    width: max-content;
+    
+    &--light{
+        color: map-get($colors, "secondary");
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            width: 0px;
+            left: 0px;
+            height: 2px;
+            margin: 5px 0 0;
+            transition: .3s;
+            background: map-get($colors, "primary");
+            border-radius: $border_radius;
+        }
+        
+        &:focus:after{
+            width: 100%;
+        }
+        
+        &:hover{
+            color: map-get($colors, "primary");
+        }
+    }
+    
+    &--dark{
+        color: map-get($colors, "secondary--lighter");
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            width: 0px;
+            left: 0px;
+            height: 2px;
+            margin: 5px 0 0;
+            transition: .3s;
+            background: map-get($colors, "neutral");
+            border-radius: $border_radius;
+        }
+        
+        &:focus:after{
+            width: 100%;
+        }
+        
+        &:hover{
+            color: map-get($colors, "neutral");
+        }
+        
+    }
+
+    
+}

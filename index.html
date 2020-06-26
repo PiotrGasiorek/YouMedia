@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Jesteśmy młodymi ambitnymi twórcami. Oferujemy usługi foto wideo, tworzenie stron, grafik oraz rental sprzętu.">
+    <title>YouMedia</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/gallery/icons/favicon.png"/>
+    <!-- Screen loading -->
+    <script src="static/js/screenLoading.js" type="module"></script>
+    <!-- YouMedia API -->
+    <script src="./static/js/homepageAPI.js" type="module"></script>
+    <!-- Responsive nav -->
+    <script src="static/js/mobileNav.js" type="module"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148027686-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-148027686-1');
+    </script>
+</head>
+<body>
+    <div class="animationBlock">    
+        <img class='animationBlock__content' src="static/gallery/logo.svg" alt="YouMedia logo">
+    </div>
+    <header class='header header--large'>
+        <nav class='nav nav__container nav--dark'>
+            <div class="nav__left">
+                <a href="strona-glowna">
+                    <img class='nav__logo' src="static/gallery/logo.svg" alt="YouMedia logo">
+                </a>
+            </div>
+            <div class="nav__right">
+                <div class="nav__links">
+                    <a href="portfolio" class="nav__link link link--dark">portfolio</a>
+                    <a href="zespol" class="nav__link link link--dark">zespół</a>
+                    <a href="praca" class="nav__link link link--dark">praca</a>
+                    <a href="rental" class="nav__link link link--dark">rental sprzętu</a>
+                    <a href="kontakt" class="nav__link link link--dark">kontakt</a>
+                </div>
+            </div>
+        </nav>
+        <div id='navOverlay' class="overlay"></div>
+        <div class="sideNav">
+            <button class='sideNav__btn btn--round'>
+                <img src="static/gallery/icons/close--light.svg" alt="Close button">
+            </button>
+        </div>
+        <video class='header__video' autoplay muted loop>
+        </video>
+        <div class="header__jumbotron">
+            <div class="header__container container container--primary">
+                <h1 class='header__title title title--lg title--light'>
+                    Unlock your brand
+                    <br>
+                    Some more cool text about us
+                </h1>
+                <a class='header__btn btn btn--primary' href='portfolio'>Nasze realizacje</a>
+                <a class='header__btn btn btn--secondary'>Nasze usługi</a>
+            </div>
+        </div>
+    </header>
+    <div class="container container--primary">
+        <main class="main">
+            <h2 class='main__title title title--lg'>
+                Zobacz jakie usługi oferujemy
+            </h2>
+            <section class="services" id='services'>
+                <div class="services__card reverse">
+                    <div class="services__details details details--left">
+                        <h3 class="services__title title title--md">video i fotografia</h3>
+                        <p class="services__paragraph paragraph">Zrealizowane projekty: 13</p>
+                        <a class='services__btn btn btn--primary link' href='portfolio'>zobacz wiecej</a>
+                    </div>
+                    <img src="static/gallery/graphics/video_photography.svg" alt="Photographer & video maker" class="services__graphic">
+                </div>
+                <div class="services__card">
+                    <img src="static/gallery/graphics/web_development.svg" alt="Web developer" class="services__graphic">
+                    <div class="services__details details details--right">
+                        <h3 class="services__title title title--md">web development</h3>
+                        <p class="services__paragraph paragraph">Zrealizowane projekty: 13</p>
+                        <a class='services__btn btn btn--primary link' href='portfolio'>zobacz wiecej</a>
+                    </div>
+                </div>
+                <div class="services__card reverse">
+                    <div class="services__details details details--left">
+                        <h3 class="services__title title title--md">graphic</h3>
+                        <p class="services__paragraph paragraph">Zrealizowane projekty: 13</p>
+                        <a class='services__btn btn btn--primary link' href='portfolio'>zobacz wiecej</a>
+                    </div>
+                    <img src="static/gallery/graphics/graphic.svg" alt="Designer" class="services__graphic">
+                </div>
+                <div class="services__card">
+                    <img src="static/gallery/graphics/rental.svg" alt="Sending equpiment" class="services__graphic">
+                    <div class="services__details details details--right">
+                        <h3 class="services__title title title--md">rental sprzętu</h3>
+                        <p class="services__paragraph paragraph">Zrealizowane projekty: 13</p>
+                        <a class='services__btn btn btn--primary link' href='rental'>zobacz oferte</a>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+    </div>   
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid grid grid--three">
+                <div class='footer__column'>
+                    <a href="strona-glowna">
+                        <img class='footer__logo' src="static/gallery/logo.svg" alt="YouMedia logo">
+                    </a>
+                </div>
+                <div class='footer__column'>
+                    <h4 class='footer__title title title--light title--xs'>Kontakt</h4>
+                    <a href="mailto:office@you-media.pl" class="footer__link link link--dark">office@you-media.pl</a>
+                    <a href="tel:696-979-896" class="footer__link link link--dark">(+48) 696 979 896</a>
+                    <a href="https://www.instagram.com/you.media/" class="footer__link link link--dark">
+                        <img class='footer__icon link--icon' src="static/gallery/icons/instagram.svg" alt="Instagram icon">
+                    </a>
+                </div>
+                <div class='footer__column'>
+                    <h4 class='footer__title title title--light title--xs'>Podstrony</h4>
+                    <a href="praca" class="footer__link link link--dark">praca</a>
+                    <a href="kontakt" class="footer__link link link--dark">kontakt</a>
+                    <a href="zespol" class="footer__link link link--dark">zespół</a>
+                    <a href="portfolio" class="footer__link link link--dark">portfolio</a>
+                    <a href="rental" class="footer__link link link--dark">rental sprzętu</a>
+                </div>
+            </div>
+            <p class='paragraph paragraph--dark paragraph--sm'>copyright 2020 wszystkie prawa zastrzeżone YouMedia</p>
+        </div>
+    </footer>
+</body>

@@ -1,0 +1,116 @@
+.btn{
+    border: none;
+    padding: 15px 40px;
+    color: map-get($colors, "neutral");
+    text-transform: lowercase;
+    border-radius: $border_radius;
+    font-family: map-get($font_family, "default");
+    font-size: 18px;
+    font-weight: map-get($font_weights, "bold");
+    text-align: center;
+
+    &:hover{
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &--primary{
+        background-color: map-get($colors, "primary");
+        border: 2px solid map-get($colors, "primary");
+
+        &:hover{
+            color: map-get($colors, "primary");
+        }
+
+        &:focus{
+            box-shadow: map-get($box_shadows, "primary");
+        }
+    }
+
+    &--secondary{
+        background-color: map-get($colors, "tertiary");
+        border: 2px solid map-get($colors, "tertiary");
+    
+        &:hover{
+            color: map-get($colors, "tertiary");
+        }
+
+        &:focus{
+            box-shadow: map-get($box_shadows, "secondary");
+        }
+    }
+
+    &--round{
+        border: none;
+        border-radius: 50%;
+        background: none;
+
+        &:focus{
+            animation: example .3s ease;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &--alignLeft{
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    &--toggle{
+        color: map-get($colors, "quaternary");
+        background: none;
+        padding: 15px 25px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            width: 8px;
+            left: calc(50% - 4px);
+            height: 8px;
+            margin: 5px 0 0;
+            transform: scale(0);
+            transition: .3s;
+            background: map-get($colors, "tertiary");
+            border-radius: 50px;
+        }
+
+        &:hover:before{
+            animation: pulse infinite 1s;
+        }
+
+        &:hover{
+            &:before{
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media (max-width: map-get($breakpoints, "mobile")) {
+    .btn{
+        display: block;
+        width: 100% !important;
+    }
+}
+
+@keyframes example {
+    from {transform: translateY(5px)}
+    to {transform: translateY(0px)}
+  }
+
+  @keyframes pulse{
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+  }
